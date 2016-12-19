@@ -1,0 +1,54 @@
+<persistence version="2.0"
+	xmlns="http://java.sun.com/xml/ns/persistence">
+	<persistence-unit name="odontoplus" transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+
+		<class>br.jus.tre_am.odontoplus.model.Dente</class>
+
+		<properties>
+
+			<!-- POSTGRES
+			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:postgresql://localhost:5432/notasfiscais"></property>
+			<property name="javax.persistence.jdbc.user" value="postgres" />
+			<property name="javax.persistence.jdbc.password" value="belinha1" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
+			<property name="hibernate.connection.shutdown" value="true" />
+			<property name="hibernate.hbm2ddl.auto" value="create" />
+			<property name="hibernate.show_sql" value="false" />
+			<property name="hibernate.format_sql" value="false" />
+			-->
+			 
+			  
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/odontoplus" />
+			<property name="javax.persistence.jdbc.user" value="root" />
+			<property name="javax.persistence.jdbc.password" value="Lilico@2017" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.show_sql" value="false" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" />
+			<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
+			<property name="hibernate.connection.url"
+				value="jdbc:mysql://localhost/odontoplus?useSSL=false" />
+			<property name="hibernate.connection.autoReconnect" value="false" />
+			<property name="hibernate.generate_statistics" value="false" />
+			<property name="hibernate.c3p0.timeout" value="1800" />
+			<property name="hibernate.use_sql_comments" value="false" />
+			<property name="hibernate.verifyServerCertificate" value="false" />
+
+  			
+  			<!--  ORACLE 
+			<property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@10.22.10.103:1521:helpdesk" />
+			<property name="javax.persistence.jdbc.user" value="asweb2014" />
+			<property name="javax.persistence.jdbc.password" value="aswebdb02" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect" />
+			<property name="hibernate.connection.driver_class" value="oracle.jdbc.OracleDriver" />
+			-->
+
+		</properties>
+	</persistence-unit>
+</persistence>

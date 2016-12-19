@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTDXHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/shtml1/dtd/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+
+
+
+		<h:outputText value="Produtos" styleClass="textoSecao" />
+		<br />
+		<p:separator />
+		<br />
+
+		<h:form id="form_pesq">
+			<div style="overflow-x: auto;">
+
+				<p:outputLabel value="Nenhum dente cadastrado no momento"
+					rendered="#{empty denteBean.listagem}" />
+
+				<p:dataTable id="tbl" value="#{denteBean.listagem}" var="item"
+					  lazy="false" rendered="#{not empty denteBean.listagem}">
+
+					
+					<p:column headerText="ID DENTE">
+						<h:outputText value="#{item.idDente}" />
+					</p:column>
+					<p:column headerText="DENTE">
+						<h:outputText value="#{item.txDente}" />
+					</p:column>
+
+				</p:dataTable>
+			</div>
+
+			<br />
+
+		</h:form>
+
+</html>
